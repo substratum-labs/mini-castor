@@ -1,0 +1,25 @@
+[project]
+name = "mini-castor"
+version = "0.1.0"
+description = "The xv6 of Agent Operating Systems — learn checkpoint/replay, HITL, and capability budgets in <500 lines of Python"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [
+    { name = "Substrate Lab" },
+]
+keywords = ["llm", "agents", "education", "microkernel", "checkpoint", "hitl"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.24",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
